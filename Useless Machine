@@ -1,0 +1,38 @@
+/*Program written by Tianyi Shi and Serena Seow on 20th February
+ * Assignment: Useless Machine
+ */
+
+#include <Servo.h> // Include library
+Servo servoa; // Make new servo object
+Servo servob; // Make new servo object
+int posa = 0; // Store the position
+int posb = 0;
+
+void setup() {
+  pinMode(13, INPUT); // The Button
+  servoa.attach(9); // attaches the servo on pin 9 to the servo object
+  servob.attach(10);
+}
+
+void loop() {
+   for (posa = 0; posa <= 180; posa += 3) { 
+    // goes from 0 degrees to 180 degrees
+    servoa.write(posa); // tell servo to go to position in variable 'pos'
+    delay(15); // waits 15ms for the servo to reach the position
+    }
+   for (posb = 0; posb <= 180; posb += 3) { 
+    // goes from 0 degrees to 180 degrees
+    servob.write(posb); // tell servo to go to position in variable 'pos'
+    delay(15); // waits 15ms for the servo to reach the position
+    }
+    for (posa = 180; posa >= 0; posa -= 3) { 
+    // goes from 180 degrees to 0 degrees
+    servoa.write(posa); // tell servo to go to position in variable 'pos'
+    delay(15); // waits 15ms for the servo to reach the position
+    }
+   for (posb = 180; posb >= 0; posb -= 3) { 
+    // goes from 180 degrees to 0 degrees
+    servob.write(posb); // tell servo to go to position in variable 'pos'
+    delay(15); // waits 15ms for the servo to reach the position
+    }
+}

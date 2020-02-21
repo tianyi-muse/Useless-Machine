@@ -15,23 +15,23 @@ void setup() {
 }
 
 void loop() {
-   for (posa = 0; posa <= 180; posa += 3) { 
-    // goes from 0 degrees to 180 degrees
+   for (posa = 0; posa <= 45; posa += 1) { 
+    // goes from 0 degrees to 45 degrees
     servoa.write(posa); // tell servo to go to position in variable 'pos'
     delay(15); // waits 15ms for the servo to reach the position
     }
-   for (posb = 0; posb <= 180; posb += 3) { 
-    // goes from 0 degrees to 180 degrees
+   for (posb = 90; posb >= 0; posb -= 1) { 
+    // goes from 90 degrees to 0 degrees
     servob.write(posb); // tell servo to go to position in variable 'pos'
     delay(15); // waits 15ms for the servo to reach the position
     }
-    for (posa = 180; posa >= 0; posa -= 3) { 
-    // goes from 180 degrees to 0 degrees
+    for (posa = 45; posa >= 0; posa -= 1) { 
+    // goes from 45 degrees to 0 degrees
     servoa.write(posa); // tell servo to go to position in variable 'pos'
     delay(15); // waits 15ms for the servo to reach the position
     }
-   for (posb = 180; posb >= 0; posb -= 3) { 
-    // goes from 180 degrees to 0 degrees
+   for (posb = 0; posb <= 90; posb += 1) { 
+    // goes from 0 degrees to 90 degrees
     servob.write(posb); // tell servo to go to position in variable 'pos'
     delay(15); // waits 15ms for the servo to reach the position
     }
